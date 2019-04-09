@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+  <script type="text/javascript" src="http://code.angularjs.org/1.4.8/angular.js"></script>
+  <script type="text/javascript" src="http://code.angularjs.org/1.4.8/angular-animate.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"></script>
+  <script type="text/javascript" src="example.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div ng-controller="MainCtrl" class="well">
+  
+  <select ng-model="progressbar" >
+	  <option value="1" selected> Progress Bar 1</option>
+	  <option value="2"> Progress Bar 2</option>
+	  <option value="3"> Progress Bar 3</option>
+  </select>
+  <br><br>
+		<pre>{{ counter1 }}/{{ max }} = {{ (counter1/max)*100 }}%</pre>
+		<uib-progressbar value="dynamic1" type="{{type1}}"></uib-progressbar>
+	
+		<pre>{{ counter2 }}/{{ max }} = {{ (counter2/max)*100 }}%</pre>
+		<uib-progressbar value="dynamic2" type="{{type2}}"></uib-progressbar>
+	
+		<pre>{{ counter3 }}/{{ max }} = {{ (counter3/max)*100 }}%</pre>
+		<uib-progressbar value="dynamic3" type="{{type3}}"></uib-progressbar>
+	
+	<div>
+		<button class="btn btn-primary"  type="button" ng-click="increment(-25)">-25</button>
+		<button class="btn btn-primary" type="button" ng-click="increment(-10)">-10</button>
+		<button class="btn btn-primary" type="button" ng-click="increment(+25)">+25</button>
+		<button class="btn btn-primary" type="button" ng-click="increment(+10)" >+10</button>
+	</div>
+  </div>
+</body>
+</html>
