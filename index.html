@@ -19,14 +19,14 @@
 	  <option value="3"> Progress Bar 3</option>
   </select>
   <br><br>
-		<pre>{{ counter1 }}/{{ max }} = {{ (counter1/max)*100 }}%</pre>
-		<uib-progressbar value="dynamic1" type="{{type1}}"></uib-progressbar>
+		<pre>{{ counter1 }}/{{ max }} = {{ dynamic1}}%</pre>
+		<uib-progressbar value="dynamic1" type="{{type1}}">{{ dynamic1 }}%</uib-progressbar>
 	
-		<pre>{{ counter2 }}/{{ max }} = {{ (counter2/max)*100 }}%</pre>
-		<uib-progressbar value="dynamic2" type="{{type2}}"></uib-progressbar>
+		<pre>{{ counter2 }}/{{ max }} = {{dynamic2 }}%</pre>
+		<uib-progressbar value="dynamic2" type="{{type2}}">{{dynamic2}}%</uib-progressbar>
 	
-		<pre>{{ counter3 }}/{{ max }} = {{ (counter3/max)*100 }}%</pre>
-		<uib-progressbar value="dynamic3" type="{{type3}}"></uib-progressbar>
+		<pre>{{ counter3 }}/{{ max }} = {{dynamic3}}%</pre>
+		<uib-progressbar value="dynamic3" type="{{type3}}">{{dynamic3}}%</uib-progressbar>
 	
 	<div>
 		<button class="btn btn-primary"  type="button" ng-click="increment(-25)">-25</button>

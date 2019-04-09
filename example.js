@@ -18,24 +18,43 @@ app.controller("MainCtrl",['$scope', function ($scope) {
 		
 		if($scope.progressbar == 1)
 		{
+			$scope.counter1 = $scope.counter1 + val;
+			$scope.dynamic1 = Math.round($scope.counter1 / $scope.max * 100);
+			if($scope.counter1 > 100)
 			{
-				$scope.counter1 = $scope.counter1 + val;
-				$scope.dynamic1 = $scope.counter1 / $scope.max * 100;
-				$scope.type1 = types[$scope.counter1 % 4];
-				$scope.counter1 = parseInt($scope.counter1);
+				$scope.type1 = types[0];
 			}
+			else
+			{
+				$scope.type1 = types[2];
+			}
+			$scope.counter1 = parseInt($scope.counter1);
 		}
 		if($scope.progressbar == 2)
 		{
 			$scope.counter2 = $scope.counter2 + val;
-			$scope.dynamic2 = $scope.counter2 / $scope.max * 100;
-			$scope.type2 = types[$scope.counter2 % 4];
+			$scope.dynamic2 = Math.round($scope.counter2 / $scope.max * 100);
+			if($scope.counter2 > 100)
+			{
+				$scope.type2 = types[0];
+			}
+			else
+			{
+				$scope.type2 = types[2];
+			}
 		}
 		if($scope.progressbar == 3)
 		{
 			$scope.counter3 = $scope.counter3 + val;
-			$scope.dynamic3 = $scope.counter3 / $scope.max * 100;
-			$scope.type3 = types[$scope.counter3 % 4];
+			$scope.dynamic3 = Math.round($scope.counter3 / $scope.max * 100);
+			if($scope.counter3 > 100)
+			{
+				$scope.type3 = types[0];
+			}
+			else
+			{
+				$scope.type3 = types[2];
+			}
 		}
     }
 }]);
